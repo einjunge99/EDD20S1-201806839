@@ -1,0 +1,55 @@
+public static void main(String[] args) {
+        boolean active = true;
+        while (active) {
+
+            int size = 0;
+            Scanner firstEntry = new Scanner(System.in);
+
+            System.out.println("Por favor, ingrese el tamaño de la matriz MxM, donde M es entero:");
+            try {
+                size = firstEntry.nextInt();
+
+            } catch (Exception e) {
+                System.out.println("Entrada no válida");
+            }
+            int row = size;
+            int column = size;
+            for (int i = 0; i < size; i++) {
+                for (int k = 0; k < size; k++) {
+                    if (row == size || row == 1) {
+                        System.out.print("1 ");
+                        
+                    } else {
+                        if (column == size || column == 1) {
+                            System.out.print("1 ");
+                        } else {
+                            System.out.print("0 ");
+                        }
+                        column--;
+                    }
+                }
+                row--;
+                column = size;
+                System.out.println("");
+            }
+            boolean menu = true;
+            while (menu) {
+                System.out.println("1. Ingresar una nueva entrada:");
+                System.out.println("2. Finalizar");
+                System.out.println("Tu entrada: ");
+                try {
+                    Scanner secondEntry = new Scanner(System.in);
+                    int entry = secondEntry.nextInt();
+                    if (entry == 2) {
+                        active = false;
+                        menu = false;
+                    } else if (entry == 1) {
+                        menu = false;
+                    }
+
+                } catch (Exception e) {
+                    System.out.println("Entrada no válida");
+                }
+            }
+        }
+    }
