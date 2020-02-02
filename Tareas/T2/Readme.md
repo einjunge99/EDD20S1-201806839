@@ -12,42 +12,30 @@ requerimientos: cantidad>0
 efecto: creación de objeto moneda con los atributos especificados
 ```
 
-# ESPECIFICACION TDA
+* transferencia(usuario,monedaNombre:cadena, cantidad:entero):
 
-## MONEDA
-
-Cabecera: moneda, transferencia, transferenciaForm, reporte
-Descripción: valores compuestos por cadenas y/o números enteros
-Operaciones: 
-	moneda(nombre:cadena,cantidad:entero):
-
-	```bash
-	requerimientos: cantidad>0
-	efecto: creación de objeto moneda con los atributos especificados
-	```
-	transferencia(usuario,monedaNombre:cadena, cantidad:entero):
-
-	```bash
-	efecto: acreditación de cantidad de moneda especificada en usuario en conjunto con su descuento del monedero 	
-	```
-	transferenciaForm(usuario,destinatario,moneda:cadena,cantidad):
+```bash
+efecto: acreditación de cantidad de moneda especificada en usuario en conjunto con su descuento del monedero 	
+```
+* transferenciaForm(usuario,destinatario,moneda:cadena,cantidad):
 	
-		```bash
-		efecto: acreditación de cantidad de moneda especificada en usuario en conjunto con su descuento en cuenta del portador
-			```
-	reporte():
+```bash
+efecto: acreditación de cantidad de moneda especificada en usuario en conjunto con su descuento en cuenta del portador
+```
+* reporte():
 	
-	```bash
-		efecto: despliegue de detalle de disposición de monedas de cada acreedor de las mismas
-	```
+```bash
+efecto: despliegue de detalle de disposición de monedas de cada acreedor de las mismas
+```
 
 ## DUEÑO
 
 Cabecera: duenio
 Descripción: valores compuestos por cadenas y/o números enteros
 Operaciones: 
-	duenio(usuario:cadena): 
+
+* duenio(usuario:cadena): 
 	
-	```bash
-		efecto: creación de objeto dueño con los atributos especificados
-	```
+```bash
+efecto: creación de objeto dueño con los atributos especificados
+```
