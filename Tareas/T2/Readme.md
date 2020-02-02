@@ -4,11 +4,13 @@
 Cabecera: moneda, transferencia, transferenciaForm, reporte
 Descripción: valores compuestos por cadenas y/o números enteros
 Operaciones: 
-	moneda(nombre:cadena,cantidad:entero): 
+	moneda(nombre:cadena,cantidad:entero):
+	
 	```bash
 		requerimientos: cantidad>0
 		efecto: creación de objeto moneda con los atributos especificados
-		```
+	```
+	
 	transferencia(usuario,monedaNombre:cadena, cantidad:entero)
 	```bash
 		efecto: acreditación de cantidad de moneda especificada en usuario en conjunto con su descuento del monedero 	
