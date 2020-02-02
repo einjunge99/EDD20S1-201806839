@@ -4,6 +4,7 @@
 Cabecera: moneda, transferencia, transferenciaForm, reporte
 Descripción: valores compuestos por cadenas y/o números enteros
 Operaciones: 
+moneda(nombre:cadena,cantidad:entero):
 
 ```bash
 requerimientos: cantidad>0
