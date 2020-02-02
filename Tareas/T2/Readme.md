@@ -16,7 +16,8 @@ pip install foobar
 Cabecera: moneda, transferencia, transferenciaForm, reporte
 Descripción: valores compuestos por cadenas y/o números enteros
 Operaciones: 
-	moneda(nombre:cadena,cantidad:entero).
+	moneda(nombre:cadena,cantidad:entero):
+
 	```bash
 		requerimientos: cantidad>0
 		efecto: creación de objeto moneda con los atributos especificados
