@@ -1,10 +1,9 @@
-# Foobar
+# ESPECIFICACION TDA
 
-Foobar is a Python library for dealing with word pluralization.
-
-## Installation
-
-Use the package manager [pip](https://pip.pypa.io/en/stable/) to install foobar.
+## Moneda
+Cabecera: moneda, transferencia, transferenciaForm, reporte
+Descripción: valores compuestos por cadenas y/o números enteros
+Operaciones: 
 
 ```bash
 requerimientos: cantidad>0
@@ -12,6 +11,7 @@ efecto: creación de objeto moneda con los atributos especificados
 ```
 
 # ESPECIFICACION TDA
+
 ## MONEDA
 
 Cabecera: moneda, transferencia, transferenciaForm, reporte
