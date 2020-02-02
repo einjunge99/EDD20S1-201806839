@@ -1,3 +1,6 @@
+
+import static tda.Currency.currencyList;
+import static tda.Currency.ownerList;
 import java.util.Scanner;
 
 public class TDA {
