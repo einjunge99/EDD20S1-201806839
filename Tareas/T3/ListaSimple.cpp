@@ -6,7 +6,9 @@ class Student{
     public :
     int  identifier;
     string name;
-    Student();
+    Student(){
+
+    };
     Student(int _identifier,string _name){
     identifier=_identifier;
     name=_name;
@@ -17,16 +19,14 @@ class Student{
 
 
 class SimpleList{
-    private:
+    public:
     typedef struct Node{
-        Student student;
+    Student student;
         Node* next;
     }* nodePointer;
 
     nodePointer head;
     
-    public:
-
 
     SimpleList(){
         head=NULL;
@@ -40,10 +40,13 @@ class SimpleList{
         Student newData(identifier,name);
         nodePointer n=new Node;
         n->student=newData;
-        n->next=NULL;
+        n->next=head;
 
         head=n;
+
+        
     }
+    //it still has a bug while deleting, so I have to figure it out 
     void deleteData(int reference){
         if(!isEmpty()){
             if(head->student.identifier==reference){
@@ -55,7 +58,7 @@ class SimpleList{
                 while(aux->student.identifier!=reference){
                     aux=aux->next; 
                 }
-                 nodePointer newNext=new Node;
+                nodePointer newNext=new Node;
                 newNext=aux->next->next;
                 aux->next=newNext;
             }
@@ -86,16 +89,29 @@ class SimpleList{
         nodePointer aux=new Node;
         aux=head;
         while(aux!=NULL){
-            cout<<aux->student.name;
+            cout<<aux->student.name<<"\n";
+            aux=aux->next;
         }
 
     }
  
+
 };
 
 
 
 int main(){
-    return 0;
-};
+    SimpleList list;
+    list.add(201806839,"Isaac"); 
+    list.add(201806840,"Gaby");   
+    list.add(201806842,"Sam");   
+    list.add(201806845,"Sofia");  
+
+    cout<<"Initial data: \n";
+     list.showAll(); 
+
+    SimpleList::nodePointer aux=new SimpleList::Node;
+    aux=list.search(201806845);
+    cout<<"Search by code 201806839: \n";
+    cout<<"Name: "<<aux->student.name<<"\n
 
